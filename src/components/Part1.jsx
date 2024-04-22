@@ -31,10 +31,11 @@ const Part1 = () => {
 
 		// Add ScrollTrigger to the image for enlarging effect on scroll down
 		ScrollTrigger.create({
-			trigger: imageElement,
-			start: "bottom 70%", // Class to toggle when the ScrollTrigger is active
+			trigger: textHeadingElement,
+			start: "top 30%",
+			stagger: 1, 
 			onEnter: () => {
-				gsap.to(imageElement, { scale: 0.6, duration: 1 });
+				gsap.to(imageElement, { scale: 0.5, duration: 1 });
 			},
 			onLeaveBack: () => {
 				gsap.to(imageElement, { scale: 1, duration: 1 });
@@ -70,6 +71,15 @@ const Part1 = () => {
 		});
 	};
 
+	const goToProjects = () => {
+		scrollToComponent("projects");
+	};
+
+	const scrollToComponent = (componentId) => {
+		const component = document.getElementById(componentId);
+		component.scrollIntoView({ behavior: "smooth" });
+	};
+
 	return (
 		<div
 			className="h-screen w-full"
@@ -79,15 +89,15 @@ const Part1 = () => {
 				ref={circle}
 				className="flex items-center justify-center rounded-full z fixed"
 				style={{
-					height: "5vw",
-					width: "5vw",
-					backgroundColor: "#ADBBDA",
+					height: "5.5vw",
+					width: "5.5vw",
+					backgroundColor: "#DDA9D0",
 					top: mouse.y,
 					left: mouse.x,
 					transform: "translate(-50%, -50%)",
 				}}
 			>
-				<div className="text-lg font-semibold">Try This</div>
+				<div className="text-5xl font-semibold">😎</div>
 			</div>
 			<div
 				className="h-full w-full relative z-20 flex flex-col items-center justify-between"
@@ -121,6 +131,12 @@ const Part1 = () => {
 							sign
 						</span>
 						<br />
+						<button
+							onClick={goToProjects}
+							className="text-white bg-black rounded-full py-3 px-4 text-lg transition-colors duration-500 ease-in-out hover:bg-white hover:text-black "
+						>
+							My Projects
+						</button>
 					</div>
 					<div ref={image}>
 						<img

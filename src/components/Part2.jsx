@@ -20,61 +20,46 @@ const Part2 = () => {
 				start: "top 70%",
 				end: "bottom 30%",
 				scrub: true,
-				markers: true,
 			},
 		});
+
 		tl.fromTo(
-			headingElement,
-			{ y: -50, opacity: 0 },
-			{ y: 0, opacity: 1, duration: 3 }
-		)
-			.fromTo(
-				textElement,
-				{ y: 50, opacity: 0 },
-				{ y: 0, opacity: 1, duration: 3 },
-				"-=1"
-			)
-			.fromTo(
-				hrElement,
-				{ scaleX: 0 },
-				{ scaleX: 1, duration: 3 },
-				"-=1.5"
-			);
+			[headingElement, textElement],
+			{ y: 50, opacity: 0 },
+			{ y: 0, opacity: 1, duration: 1, stagger: 0.5 }
+		).fromTo(hrElement, { scaleX: 0 }, { scaleX: 1, duration: 1 }, "-=0.5");
 	}, []);
+
 	return (
-		<>
-			<div
-				className="h-screen w-full "
-				style={{ backgroundColor: "#EDE8F5" }}
-			>
-				<div className=" mx-20 pt-24 pb-4 text-4xl font-thin">
-					<h2
-						ref={headingRef}
-						style={{ fontFamily: "headline", color: "#3D52A0" }}
-					>
-						About Me
-					</h2>
-				</div>
-				<hr
-					ref={hrRef}
-					className="block mx-20 bg-black border-none"
-					style={{
-						height: "1px",
-					}}
-				/>
-				<div
-					ref={textRef}
-					className="mx-20 py-8 text-7xl"
-					style={{ fontFamily: "content", color: "#3D5280" }}
+		<div
+			className="h-auto w-full pb-24 "
+			style={{ backgroundColor: "#EDE8F5" }}
+		>
+			<div className="mx-20 text-4xl font-thin">
+				<h2
+					ref={headingRef}
+					style={{ fontFamily: "headline", color: "#3D52A0" }}
 				>
-					&emsp;Hi There! I'm Gagan Parashar. A Full Stack Web
-					Developer based in India. <br /> I have frontend skills in
-					JavaScript, ReactJS, TainwindCSS/CSS, GSAP and Figma UI/UX
-					prototype designing. I also have backend skills in
-					javascript, NodeJS, Express and SQL/NoSQL databases.
-				</div>
+					About Me
+				</h2>
 			</div>
-		</>
+			<hr
+				ref={hrRef}
+				className="block mx-20 bg-black border-none"
+				style={{ height: "1px" }}
+			/>
+			<div
+				ref={textRef}
+				className="mx-20 pt-8 text-6xl"
+				style={{ fontFamily: "content", color: "#3D52A0" }}
+			>
+				&emsp;Hi There! I'm Gagan Parashar. A Full Stack Web Developer
+				based in India. <br /> I have frontend skills in JavaScript,
+				ReactJS, TailwindCSS/CSS, GSAP, and Figma UI/UX prototype
+				designing. I also have backend skills in JavaScript, NodeJS,
+				Express, and SQL/NoSQL databases.
+			</div>
+		</div>
 	);
 };
 
