@@ -33,7 +33,7 @@ const Part1 = () => {
 		ScrollTrigger.create({
 			trigger: textHeadingElement,
 			start: "top 30%",
-			stagger: 1, 
+			stagger: 1,
 			onEnter: () => {
 				gsap.to(imageElement, { scale: 0.5, duration: 1 });
 			},

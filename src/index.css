@@ -1,10 +1,14 @@
 @font-face {
 	font-family: headline;
-	src: url(Rejouice-Headline.ttf);
+	src: url("./fonts/Rejouice-Headline.woff2") format(".woff2"),
+		url("./fonts/Rejouice-Headline.ttf");
+	/* src: url(Rejouice-Headline.ttf); */
 }
 @font-face {
 	font-family: content;
-	src: url(NBInternationalProBoo.ttf);
+	src: url("./fonts/NBInternationalProBoo.woff2") format(".woff2"),
+		url("./fonts/NBInternationalProBoo.ttf");
+	/* src: url(NBInternationalProBoo.ttf); */
 }
 
 * {
@@ -26,7 +30,3 @@ body {
 	height: 100%;
 	width: 100%;
 }
-
-/* COLORS USED */
-/* content text color - "#3D52A0" */
-/* backgroundColor - "#EDE8F5"  */

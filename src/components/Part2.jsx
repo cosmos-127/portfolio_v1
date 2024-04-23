@@ -2,14 +2,13 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Part2 = () => {
 	const headingRef = useRef(null);
 	const textRef = useRef(null);
 	const hrRef = useRef(null);
 
 	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		const headingElement = headingRef.current;
 		const textElement = textRef.current;
 		const hrElement = hrRef.current;

@@ -1,17 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import proj1image from "../images/upay/homepage.png";
-import proj2image from "../images/esdap/esdap.png";
-import proj3image from "../images/portfolio/landing.png";
-
-gsap.registerPlugin(ScrollTrigger);
+import proj1image from "../images/projects/upay/homepage.png";
+import proj2image from "../images/projects/esdap/esdap.png";
+import proj3image from "../images/projects/portfolio/landing.png";
 
 const Part3 = () => {
 	const headingRef = useRef(null);
 	const projRef = useRef(null);
 
 	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		const headingElement = headingRef.current;
 		const projElement = projRef.current;
 
