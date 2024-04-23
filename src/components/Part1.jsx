@@ -32,7 +32,7 @@ const Part1 = () => {
 		// Add ScrollTrigger to the image for enlarging effect on scroll down
 		ScrollTrigger.create({
 			trigger: textHeadingElement,
-			start: "top 30%",
+			start: "top 35%",
 			stagger: 1,
 			onEnter: () => {
 				gsap.to(imageElement, { scale: 0.5, duration: 1 });
