@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import proj1image from "../images/projects/upay/homepage.png";
 import proj2image from "../images/projects/esdap/esdap.png";
-import proj3image from "../images/projects/portfolio/landing.png";
+import proj3image from "../images/projects/portfolio/portfolio.png";
 
 const Part3 = () => {
 	const headingRef = useRef(null);

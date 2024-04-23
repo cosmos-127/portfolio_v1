@@ -6,7 +6,7 @@ import twitterSvg from "../images/svg/twitter.svg";
 const Footer = () => {
 	return (
 		<footer
-			className="p-12"
+			className="p-12 pb-8"
 			style={{ backgroundColor: "#EDE8F5", color: "#3D52A0" }}
 		>
 			<div className=" mx-auto px-4 flex flex-col md:flex-row md:justify-between">
